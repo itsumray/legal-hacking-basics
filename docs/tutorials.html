@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>Legal Hacking Tutorials</h1>
     <nav>
@@ -18,33 +19,31 @@
     </nav>
   </header>
 
-  <section>
-    <h2>Penetration Testing Basics</h2>
-    <p>Learn the basics of penetration testing, including tools and techniques for ethical hacking.</p>
+  <main>
+    <section>
+      <h2>Penetration Testing Basics</h2>
+      <button onclick="toggleContent('pt-tutorial')">Show/Hide Tutorial</button>
+      <div id="pt-tutorial" class="content-toggle">
+        <p>Learn how penetration testing helps identify vulnerabilities in a system.</p>
+      </div>
+    </section>
 
-    <button onclick="toggleContent('pt-tools')">Tools for Penetration Testing</button>
-    <div id="pt-tools" class="content-toggle">
-      <ul>
-        <li>Nmap</li>
-        <li>Metasploit</li>
-        <li>Burp Suite</li>
-        <li>Wireshark</li>
-      </ul>
-    </div>
+    <section>
+      <h2>Network Security Fundamentals</h2>
+      <button onclick="toggleContent('network-tutorial')">Show/Hide Tutorial</button>
+      <div id="network-tutorial" class="content-toggle">
+        <p>Learn the importance of securing your network from hackers.</p>
+      </div>
+    </section>
 
-    <h2>Network Security</h2>
-    <p>Understand the importance of securing networks and preventing attacks.</p>
-
-    <button onclick="toggleContent('network-security')">Network Security Best Practices</button>
-    <div id="network-security" class="content-toggle">
-      <ul>
-        <li>Firewalls</li>
-        <li>Encryption</li>
-        <li>VPNs</li>
-        <li>Intrusion Detection Systems (IDS)</li>
-      </ul>
-    </div>
-  </section>
+    <section>
+      <h2>Cryptography 101</h2>
+      <button onclick="toggleContent('crypto-tutorial')">Show/Hide Tutorial</button>
+      <div id="crypto-tutorial" class="content-toggle">
+        <p>Understanding cryptography is crucial for protecting sensitive data.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Legal Hacking Basics</p>
