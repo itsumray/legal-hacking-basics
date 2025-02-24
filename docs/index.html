@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>Welcome to Legal Hacking Basics</h1>
     <nav>
@@ -18,24 +19,34 @@
     </nav>
   </header>
 
-  <section id="main-content">
-    <h2>What is Legal Hacking?</h2>
-    <p>Legal hacking, also known as ethical hacking, is the practice of identifying and fixing security vulnerabilities with permission to improve security.</p>
-
-    <h2>Start Learning</h2>
-    <p>Here are some beginner-friendly topics to explore:</p>
-    <ul>
-      <li><a href="tutorials.html">Penetration Testing Basics</a></li>
-      <li><a href="tutorials.html">Network Security</a></li>
-      <li><a href="tutorials.html">Cryptography 101</a></li>
-    </ul>
-
-    <div id="quiz-container">
-      <h3>Test Your Knowledge</h3>
+  <main>
+    <section>
+      <h2>What is Legal Hacking?</h2>
+      <p>Legal hacking is the practice of testing and securing computer systems with permission from the owner.</p>
       <button onclick="startQuiz()">Start Quiz</button>
-      <div id="quiz"></div>
-    </div>
-  </section>
+    </section>
+
+    <section id="quiz-container" style="display:none;">
+      <h3>Test Your Knowledge</h3>
+      <p><strong>Question 1:</strong> What does Nmap do?</p>
+      <ul>
+        <li><input type="radio" name="q1" value="A"> A) Scans networks for vulnerabilities</li>
+        <li><input type="radio" name="q1" value="B"> B) Cracks passwords</li>
+        <li><input type="radio" name="q1" value="C"> C) Detects malware</li>
+      </ul>
+      <button onclick="submitQuiz()">Submit Answer</button>
+      <p id="quiz-result"></p>
+    </section>
+
+    <section>
+      <h2>Start Learning</h2>
+      <ul>
+        <li><a href="tutorials.html">Penetration Testing Basics</a></li>
+        <li><a href="tutorials.html">Network Security Fundamentals</a></li>
+        <li><a href="tutorials.html">Cryptography 101</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Legal Hacking Basics</p>
