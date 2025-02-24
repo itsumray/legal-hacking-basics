@@ -1,30 +1,23 @@
+// Quiz functionality
 function startQuiz() {
-  const quizContainer = document.getElementById('quiz');
-  quizContainer.innerHTML = `
-    <h4>What does Nmap do?</h4>
-    <ul>
-      <li><input type="radio" name="q1" value="A"> A) Scans networks for vulnerabilities</li>
-      <li><input type="radio" name="q1" value="B"> B) Cracks passwords</li>
-      <li><input type="radio" name="q1" value="C"> C) Detects malware</li>
-    </ul>
-    <button onclick="submitQuiz()">Submit</button>
-  `;
+  document.getElementById('quiz-container').style.display = "block";
 }
 
 function submitQuiz() {
   const answer = document.querySelector('input[name="q1"]:checked');
+  const result = document.getElementById('quiz-result');
+
   if (answer && answer.value === 'A') {
-    alert('Correct!');
+    result.textContent = 'Correct!';
+    result.style.color = 'green';
   } else {
-    alert('Try again!');
+    result.textContent = 'Incorrect, try again!';
+    result.style.color = 'red';
   }
 }
 
+// Toggle tutorial content visibility
 function toggleContent(id) {
   const content = document.getElementById(id);
-  if (content.style.display === "none") {
-    content.style.display = "block";
-  } else {
-    content.style.display = "none";
-  }
+  content.style.display = content.style.display === "none" ? "block" : "none";
 }
